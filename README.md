@@ -1,6 +1,41 @@
 # IA_minibots_T7_IA_generativa
 
+Para los tres primeros puntos, y teniendo en cuenta que estoy usando una distribución de ubuntu 20.04, he decidido usar docker para crear un entorno virtual para el desarrollo de los mismos. De esta manera, los entornos virtuales pueden usar correctamente las versiones de librerias necesariasa sin ningun problema, sin embargo, en un entorno diferente puede ser ejecutado sin la ayuda de docker, siempre y cuando se cumplan con las dependencias necesarias, las cuales se encuentran en el archivo requirements.txt.
+
+En resumen, se pueden usar dos vias para el uso de codigo:
+ - **Docker:** Crear la imagen y disponer el servicio a traves del puerto 8888. con el comando 
+  
+   ```bash
+   docker compose up -d
+   ```
+
+ - **Entorno virtual:** Crear un entorno virtual e instalar las dependencias necesarias con los siguientes comandos: 
+
+   Para linux:
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   ```
+   Para windows:
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+
 ### Desarrollar un agente de IA, con cualquier chatbot de IA, para el manejo de las tareas del curso.
+
+Para el desarrollo de este punto, se ha decidido usar la libreria langchain, la cual permite crear agentes de IA, con cualquier chatbot de IA, para el manejo de las tareas del curso.
+
+Para esto se descarga un modelo de lenguaje destilado, en este caso **TheBloke/Mistral-7B-Instruct-v0.2-GGUF**, el cual es un modelo de lenguaje de tamaño intermedio, el cual se ejecuta localmente y posee una confiabilidad mayor a la de los modelos de lenguaje de tamaño reducido.
+
+Luego de descargar el modelo, se configuran los parametros de ejecucion, y con la ayuda de gradio se crea una interfaz grafica para la interaccion con el agente.
+
+
 ### Mejorar el sistema RAG para crear un chat que permita acceder a la información actualizada de la Universidad Nacional, u otra empresa o entidad.
+
 ### Desarrollar un Agentic AI para el manejo personal de sus actividades.
+
 ### Hacer un estudio sobre las posibilidades de la IA Física en nuestro país. 

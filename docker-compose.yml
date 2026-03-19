@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build: .
+    container_name: jupyter_llm_env
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    # Si deseas usar GPU, debes descomentar las líneas de abajo y asegurarte de tener nvidia-container-toolkit instalado
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
