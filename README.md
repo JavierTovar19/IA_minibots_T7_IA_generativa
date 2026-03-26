@@ -42,7 +42,7 @@ Para ello, se emplea un proceso de segmentación de texto (chunking) y un modelo
 
 Se puede observar mejor todo en el siguiente archivo
 
-[02_rag_chatbot.ipynb](Codigo/02_rag_chatbot.ipynb)
+[02_rag_chatbot.ipynb](gemini/02_rag_chatbot.ipynb)
 
 Como mejora futura, el sistema podría integrarse con fuentes externas como páginas web oficiales para obtener información en tiempo real y ampliar aún más su capacidad de respuesta.
 
