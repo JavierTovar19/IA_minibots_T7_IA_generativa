@@ -1,0 +1,9 @@
+.env
+Gemini/env/
+.venv
+*.json
+.venv/
+env/
+venv/
+*.env
+.env
