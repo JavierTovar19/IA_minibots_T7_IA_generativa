@@ -36,6 +36,16 @@ Luego de descargar el modelo, se configuran los parametros de ejecucion, y con l
 
 ### Mejorar el sistema RAG para crear un chat que permita acceder a la información actualizada de la Universidad Nacional, u otra empresa o entidad.
 
+El sistema desarrollado implementa un enfoque de Retrieval-Augmented Generation (RAG), en el cual primero se recupera información relevante desde una base de documentos mediante el uso de embeddings y técnicas de similitud semántica, y posteriormente un modelo de lenguaje genera respuestas basadas en dicho contexto. 
+
+Para ello, se emplea un proceso de segmentación de texto (chunking) y un modelo de embeddings local que permite indexar eficientemente la información sin depender de servicios externos. El chatbot interactivo permite consultar contenidos almacenados en una carpeta de datos, la cual puede actualizarse fácilmente agregando nuevos documentos, garantizando así que el sistema pueda trabajar con información reciente. Este enfoque puede aplicarse a contextos reales, como la consulta de información institucional de la Universidad Nacional de Colombia, facilitando el acceso a datos relevantes para los usuarios.
+
+Se puede observar mejor todo en el siguiente archivo
+
+[02_rag_chatbot.ipynb](Codigo/02_rag_chatbot.ipynb)
+
+Como mejora futura, el sistema podría integrarse con fuentes externas como páginas web oficiales para obtener información en tiempo real y ampliar aún más su capacidad de respuesta.
+
 ### Desarrollar un Agentic AI para el manejo personal de sus actividades.
 
 ### Hacer un estudio sobre las posibilidades de la IA Física en nuestro país. 
