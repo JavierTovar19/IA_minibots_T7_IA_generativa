@@ -36,11 +36,13 @@ Luego de descargar el modelo, se configuran los parametros de ejecucion, y con l
 
 ### Mejorar el sistema RAG para crear un chat que permita acceder a la información actualizada de la Universidad Nacional, u otra empresa o entidad.
 
-El sistema desarrollado implementa un enfoque de Retrieval-Augmented Generation (RAG), en el cual primero se recupera información relevante desde una base de documentos mediante el uso de embeddings y técnicas de similitud semántica, y posteriormente un modelo de lenguaje genera respuestas basadas en dicho contexto. 
+El proyecto consiste en el desarrollo de un sistema basado en la técnica RAG (Retrieval-Augmented Generation), cuyo objetivo es permitir la consulta de información a partir de múltiples documentos PDF. La implementación se realizó en Google Colab utilizando archivos almacenados en Google Drive.
 
-Para ello, se emplea un proceso de segmentación de texto (chunking) y un modelo de embeddings local que permite indexar eficientemente la información sin depender de servicios externos. El chatbot interactivo permite consultar contenidos almacenados en una carpeta de datos, la cual puede actualizarse fácilmente agregando nuevos documentos, garantizando así que el sistema pueda trabajar con información reciente. Este enfoque puede aplicarse a contextos reales, como la consulta de información institucional de la Universidad Nacional de Colombia, facilitando el acceso a datos relevantes para los usuarios.
+El sistema lee automáticamente los documentos PDF de una carpeta, extrae su contenido y lo divide en fragmentos para facilitar su procesamiento. Posteriormente, estos fragmentos son transformados en vectores mediante el uso de TF-IDF, lo que permite comparar las consultas del usuario con la información almacenada.
 
-Se puede observar mejor todo en el siguiente archivo
+A través de una interfaz tipo chat, el usuario puede realizar preguntas en lenguaje natural, y el sistema responde mostrando el fragmento más relevante según la similitud encontrada. Este enfoque permite construir un chatbot funcional sin necesidad de utilizar APIs externas, facilitando su implementación y evitando limitaciones de uso.
+
+En conclusión, el sistema desarrollado permite realizar consultas eficientes sobre múltiples documentos, integrando técnicas de procesamiento de texto y recuperación de información en una solución práctica y escalable.
 
 [02_rag_chatbot.ipynb](gemini/02_rag_chatbot.ipynb)
 
